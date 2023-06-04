@@ -11,11 +11,11 @@ const Form = () => {
   return (
     <div className="app">
         <form>
-            <FormInput placeholder="username" setUsername/>
-            <FormInput placeholder="name" setName/>
-            <FormInput placeholder="email" setEmail/>
-            <FormInput placeholder="password" setPassword/>
-            <FormInput placeholder="password again" setVerifyPassword/>
+            <FormInput placeholder="username" setUsername={setUsername} />
+            <FormInput placeholder="name" setName={setName} />
+            <FormInput placeholder="email" setEmail={setEmail} />
+            <FormInput placeholder="password" setPassword={setPassword} />
+            <FormInput placeholder="password again" setVerifyPassword={setVerifyPassword} />
         </form>
     </div>
   )
