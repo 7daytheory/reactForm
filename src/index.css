@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.globalPadding {
+  padding: 4rem;
+}
+
+.globalMargin {
+  margin: 4rem;
+}
+
+@media screen and (max-width: 950px) {
+  .globalPadding {
+    padding: 3rem;
+  }
+
+  .globalMargin {
+    margin: 3rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .globalPadding {
+    padding: 2rem;
+  }
+
+  .globalMargin {
+    margin: 2rem;
+  }
+}
