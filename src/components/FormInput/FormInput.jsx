@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './FormInput.css';
 
 const FormInput = (props) => {
   const {label, onChange, id, required, errorMessage, ...inputProps} = props;
-  console.log(inputProps);
-  console.log(`Label ${label} | On Change : ${onChange} | Id : ${id}`);
+  const [focused, setFocused] = useState(false);
+
+  const handleFocus = (e) => {
+    setFocused(true);
+  }
   return (
     <div className="formInput">
         {/* Using singular props
@@ -17,6 +20,9 @@ const FormInput = (props) => {
           {...inputProps}
           onChange={onChange}
           required={required}
+          onBlur={handleFocus}
+          onFocus={() => inputProps.name === "verifyPassword" && setFocused(true)}
+          focused={focused.toString()}
         />
         <span>{errorMessage}</span>
     </div>

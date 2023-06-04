@@ -96,7 +96,8 @@ const Form = () => {
                 label={input.label}
                 {...input} 
                 value={values[input.name]} 
-                onChange={onChange}/>
+                onChange={onChange}
+               />
               )})
             }
 
