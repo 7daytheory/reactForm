@@ -16,7 +16,7 @@ const Form = () => {
      const handleSubmit = (e) => {
       e.preventDefault();
       const data = new FormData(e.target);
-      console.log(data);
+      console.log(Object.fromEntries(data.entries()));
      }
 
   return (
