@@ -21,6 +21,7 @@ const FormInput = (props) => {
           onChange={onChange}
           required={required}
           onBlur={handleFocus}
+          onFocus={() => inputProps.name === "verifyPassword" && setFocused(true)}
           focused={focused.toString()}
         />
         <span>{errorMessage}</span>
