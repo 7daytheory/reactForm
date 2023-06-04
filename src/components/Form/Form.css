@@ -29,5 +29,10 @@ span {
     color: red;
     font-size: 12px;
     padding: 3px;
+    display: none;
+}
+
+input:invalid ~ span {
+    display: block;
 }
 

@@ -30,6 +30,7 @@ const Form = () => {
           type: "text",
           placeholder: "username",
           errorMessage: "Username should be 5-16 characters long and not include any special characters.",
+          pattern: "",
           label: "Username"
         },
         {
@@ -38,6 +39,7 @@ const Form = () => {
           type: "text",
           placeholder: "name",
           errorMessage: "You must enter your name.",
+          pattern: "",
           label: "Name"
         },
         {
@@ -46,6 +48,7 @@ const Form = () => {
           type: "email",
           placeholder: "email",
           errorMessage: "This must be a valid email.",
+          pattern: "",
           label: "Email"
         },
         {
@@ -54,6 +57,7 @@ const Form = () => {
           type: "password",
           placeholder: "password",
           errorMessage: "Password should be 8-20 characters and include 1 letter, 1 number and 1 special character.",
+          pattern: "",
           label: "Password"
         },
         {
@@ -62,6 +66,7 @@ const Form = () => {
           type: "password",
           placeholder: "verifyPassword",
           errorMessage: "Passwords do not match.",
+          pattern: "",
           label: "Verify Password"
         },
       ]

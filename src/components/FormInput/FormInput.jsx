@@ -16,6 +16,7 @@ const FormInput = (props) => {
           <input
           {...inputProps}
           onChange={onChange}
+          required
         />
         <span>{errorMessage}</span>
     </div>
