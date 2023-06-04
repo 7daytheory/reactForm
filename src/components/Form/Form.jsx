@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import FormInput from '../FormInput/FormInput'
 
+import './Form.css';
+
 const Form = () => {
   //Set States
       // const [username, setUsername] = useState("");
@@ -67,6 +69,7 @@ const Form = () => {
   return (
     <div className="app">
         <form onSubmit={handleSubmit}>
+        <h1>Contact Form</h1>
             {
               inputs.map((input) => {
                 return (
