@@ -47,7 +47,7 @@ const Form = () => {
           placeholder: "password"
         },
         {
-          id: 1,
+          id: 5,
           name: "verifyPassword",
           type: "password",
           placeholder: "verifyPassword"
@@ -69,11 +69,14 @@ const Form = () => {
         <form onSubmit={handleSubmit}>
             {
               inputs.map((input) => {
-                <FormInput key={input.id} 
+                return (
+                <FormInput 
+                key={input.id}
+                label={input.name}
                 {...input} 
                 value={values[input.name]} 
                 onChange={onChange}/>
-              })
+              )})
             }
 
             <button type="submit">Submit</button>
