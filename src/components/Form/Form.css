@@ -3,6 +3,8 @@ form {
     padding: 0rem 3rem;
     border-radius: 10px;
     border: 2px solid #333;
+    min-width: 250px;
+    max-width: 400px;
 }
 
 h1 {
@@ -21,5 +23,16 @@ button {
     font-weight: bold;
     margin-bottom: 30px;
     margin-top: 15px;
+}
+
+span {
+    color: red;
+    font-size: 12px;
+    padding: 3px;
+    display: none;
+}
+
+input:invalid ~ span {
+    display: block;
 }
 

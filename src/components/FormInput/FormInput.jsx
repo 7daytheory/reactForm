@@ -2,7 +2,7 @@ import React from 'react'
 import './FormInput.css';
 
 const FormInput = (props) => {
-  const {label, onChange, id, ...inputProps} = props;
+  const {label, onChange, id, errorMessage, ...inputProps} = props;
   console.log(inputProps);
   console.log(`Label ${label} | On Change : ${onChange} | Id : ${id}`);
   return (
@@ -16,7 +16,9 @@ const FormInput = (props) => {
           <input
           {...inputProps}
           onChange={onChange}
+          required
         />
+        <span>{errorMessage}</span>
     </div>
   )
 }
