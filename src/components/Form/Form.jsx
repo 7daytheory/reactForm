@@ -31,7 +31,8 @@ const Form = () => {
           placeholder: "username",
           errorMessage: "Username should be 5-16 characters long and not include any special characters.",
           pattern: "^[A-za-z0-9]{5,16}$", //A-Z a-z 0-9 , 5 - 16 characters
-          label: "Username"
+          label: "Username",
+          required: true
         },
         {
           id: 2,
@@ -39,8 +40,8 @@ const Form = () => {
           type: "text",
           placeholder: "name",
           errorMessage: "You must enter your name.",
-          pattern: "",
-          label: "Name"
+          label: "Name",
+          required: true
         },
         {
           id: 3,
@@ -48,8 +49,8 @@ const Form = () => {
           type: "email",
           placeholder: "email",
           errorMessage: "This must be a valid email.",
-          pattern: "",
-          label: "Email"
+          label: "Email",
+          required: true
         },
         {
           id: 4,
@@ -57,8 +58,9 @@ const Form = () => {
           type: "password",
           placeholder: "password",
           errorMessage: "Password should be 8-20 characters and include 1 letter, 1 number and 1 special character.",
-          pattern: "",
-          label: "Password"
+          pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
+          label: "Password",
+          required: true
         },
         {
           id: 5,
@@ -66,8 +68,9 @@ const Form = () => {
           type: "password",
           placeholder: "verifyPassword",
           errorMessage: "Passwords do not match.",
-          pattern: "",
-          label: "Verify Password"
+          pattern: values.password,
+          label: "Verify Password",
+          required: true
         },
       ]
   
