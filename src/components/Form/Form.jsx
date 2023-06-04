@@ -30,7 +30,7 @@ const Form = () => {
           type: "text",
           placeholder: "username",
           errorMessage: "Username should be 5-16 characters long and not include any special characters.",
-          pattern: "",
+          pattern: "^[A-za-z0-9]{5,16}$", //A-Z a-z 0-9 , 5 - 16 characters
           label: "Username"
         },
         {
