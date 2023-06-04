@@ -8,14 +8,27 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [verifyPassword, setVerifyPassword] = useState("");
+
+  //Instead of useState you can use useRef()
+    //const usernameRef = useRef();
+      // - input rquires refer(usernameRef)
+  
+     const handleSubmit = (e) => {
+      e.preventDefault();
+      const data = new FormData(e.target);
+      console.log(data);
+     }
+
   return (
     <div className="app">
-        <form>
-            <FormInput placeholder="username" setUsername={setUsername} />
-            <FormInput placeholder="name" setName={setName} />
-            <FormInput placeholder="email" setEmail={setEmail} />
-            <FormInput placeholder="password" setPassword={setPassword} />
-            <FormInput placeholder="password again" setVerifyPassword={setVerifyPassword} />
+        <form onSubmit={handleSubmit}>
+            <FormInput name="username" placeholder="Username" setValue={setUsername} />
+            <FormInput name="name" placeholder="Name" setValue={setName} />
+            <FormInput name="email" placeholder="Email" setValue={setEmail} />
+            <FormInput name="password" placeholder="Password" setValue={setPassword} />
+            <FormInput name="verifyPassword" placeholder="Verify password" setValue={setVerifyPassword} />
+
+            <button type="submit">Submit</button>
         </form>
     </div>
   )
